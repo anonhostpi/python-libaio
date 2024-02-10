@@ -18,7 +18,7 @@ Minimal adaptation of sys/eventfd.h and bits/eventfs.h .
 """
 from ctypes import CDLL, c_uint, c_int, get_errno
 
-libc = CDLL("libc.so.6", use_errno=True)
+libc = CDLL("libc.6", use_errno=True)
 # pylint: disable=unused-argument
 def _raise_errno_on_neg_one(result, func, arguments):
     if result == -1:
